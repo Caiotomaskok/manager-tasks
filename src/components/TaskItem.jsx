@@ -5,13 +5,18 @@ import {useAlert} from "react-alert"
 import './TaskItem.scss';
 
 
-const TaskItem = ( { task } ) => {
+const TaskItem = ( { task, fetchTasks } ) => {
     const alert = useAlert ()
     
     const handleTaskDeletion = async () => {
         try{
             await axios.delete (`https://fsc-task-manager-backend.herokuapp.com/tasks/${task._id}`);
-        } catch (error){
+        
+            await fetchTasks ();
+            alert.success("A tarefa foi removida com Sucesso.")
+        } 
+        
+        catch (error){
         alert.error ("Algo deu Errado.")}
     }
 
