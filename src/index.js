@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { transitions, positions, Provider as AlertProvider } from 'react-alert'
+import {transitions, positions, Provider as AlertProvider } from 'react-alert'
 import AlertTemplate from 'react-alert-template-basic'
+
+import './index.scss';
+
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
 
 // optional configuration
 const options = {
@@ -11,20 +17,14 @@ const options = {
   offset: '30px',
   // you can also just use 'scale'
   transition: transitions.SCALE
-}
+};
 
 
-
-import './index.scss';
-
-import App from './App';
-
-import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <AlertProvider template={AlertTemplate} {...options}>
+      <AlertProvider template={AlertTemplate} {...options} transition={transitions.SCALE}>
           <App />
       </AlertProvider>
   </React.StrictMode>

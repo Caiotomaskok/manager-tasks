@@ -1,5 +1,5 @@
 
-import "./components/CustomButton.scss"
+import "./CustomButton.scss"
 
 const CustomButton = ({onClick, children}) => {
     return (
