@@ -33,7 +33,7 @@ const AddTask = ({fetchTasks}) => {
                 });
 
                 await fetchTasks();
-        }catch (error){}        
+        }catch (_e){}        
     }
 
     return (

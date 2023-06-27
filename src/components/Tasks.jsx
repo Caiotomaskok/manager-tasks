@@ -13,7 +13,7 @@ const Tasks = () => {
         try{
          const {data} = await axios.get('https://fsc-task-manager-backend.herokuapp.com/tasks')
          setTask(data)
-        } catch(error){
+        } catch(_e){
           console.log(error)
         }
       }

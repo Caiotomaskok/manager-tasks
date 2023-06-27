@@ -16,7 +16,7 @@ const TaskItem = ( { task, fetchTasks } ) => {
             alert.success("A tarefa foi removida com Sucesso.")
         } 
         
-        catch (error){
+        catch (_e){
         alert.error ("Algo deu Errado.")}
     }
 
