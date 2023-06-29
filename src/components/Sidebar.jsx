@@ -1,13 +1,13 @@
 import CustomButton from "../components/CustomButton"
 
 import "./Sidebar.scss"
-//import logo from "../assents/images/logo.png"
+import logo from "../assents/images/logo.png"
 
 const Sidebar = () => {
     return (
         <div className="sidebar-container">
             <div className="logo">
-                Fullstack
+                <img src={logo} alt="fullstack club" />
             </div>
 
             <div className="sign-out">
